@@ -45,14 +45,6 @@ Widget::Widget(QWidget *parent)
     ui->page3Label->setScaledContents(true);
     ui->page4Label->setPixmap(QPixmap(":/res/page3.png"));
     ui->page4Label->setScaledContents(true);
-    //背景音乐
-    QSound *sound=new QSound(":/res/Bgmall.wav",this);
-    soundTimer=new QTimer(this);
-    soundTimer->start(650500);
-    connect(soundTimer,&QTimer::timeout,[=](){
-        sound->play();
-    });
-    sound->play();
     pushButtonSound=new QSound(":/res/pushButtonSound.wav",this);//文件名错了
 
     //设置页面关系
